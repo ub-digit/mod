@@ -1,0 +1,8 @@
+#!/bin/bash
+ACTION="clone"
+IPDEC="130.241.35.32"
+IMGTYPE="offpc"
+OUTPUT_PATH="OUTPUTDIR"
+CLONE_CMT="PåhittadMaskinmodellAvTypen123456
+kommentarsrad 2
+kommentarsrad 3"

@@ -1,0 +1,10 @@
+DEFAULT vesamenu.c32
+PROMPT 0
+NOESCAPE 0
+ALLOWOPTIONS 0
+TIMEOUT 10
+
+label Clonezilla-live
+MENU LABEL Clonezilla Live (Ramdisk)
+KERNEL vmlinuz-cz2.4.7
+append initrd=initrd.img-cz2.4.7 boot=live union=overlay username=user config noswap edd=on nomodeset noeject net.ifnames=0 biosdevname=0 ocs_live_run=" ocs-sr -q2 -batch -b -j2 -z1p -i 2000 -p true savedisk autoname sda" ocs_prerun00="sudo modprobe -r mei_me" ocs_prerun01="<!--HOST-TEMPLATE-SETUP-->" ocs_prerun03="<!--COPY-PREPOST-SCRIPTS-->" ocs_prerun04="<!--PRERUN-CMD-->" ocs_postrun00="<!--POSTRUN-CMD-->" ocs_live_extra_param="" vmwgfx.blacklist=yes nosplash noprompt ethdevice-timeout=60 vga=788 keyboard-layouts="NONE" i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes ocs_live_batch="yes" locales="en_US.UTF-8" fetch=tftp://<!--SERVER-->/filesystem-cz2.4.7-ubssh.squashfs
